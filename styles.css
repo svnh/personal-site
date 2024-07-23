@@ -1,0 +1,125 @@
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #f0f0f0;
+    overflow: hidden; /* Prevents unwanted scrolling */
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw; /* Ensures the container takes the full viewport width */
+}
+
+.split {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.left, .right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+.left {
+    order: 2;
+}
+
+.right {
+    position: relative;
+    order: 1;
+}
+
+.text-content {
+    max-width: 500px;
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+.text-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.text-content h2 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.links {
+    margin-top: 40px;
+    font-size: 15px !important; 
+}
+
+.links a {
+    color: #f0f0f0;
+    text-decoration: underline; /* Ensures the links are always underlined */
+}
+
+.links a:hover {
+    color: #f0f0f0;
+}
+
+.image-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.name {
+    font-family: 'Montserrat', serif;
+}
+
+.sub-name {
+    font-family: 'Montserrat', serif;
+    font-size: 15px !important;
+}
+
+.bio {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ccc; /* Slightly lighter color for the bio text */
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .split {
+        flex-direction: row;
+    }
+
+    .left, .right {
+        width: 50%;
+        height: 100vh;
+        padding: 40px;
+    }
+
+    .left {
+        order: 1;
+    }
+
+    .right {
+        order: 2;
+    }
+}
